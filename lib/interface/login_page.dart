@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_dreamer/constant/color.dart';
 import 'package:job_dreamer/interface/home_page.dart';
 import 'package:job_dreamer/interface/register_page.dart';
 
@@ -29,38 +30,38 @@ class LoginPage extends StatelessWidget {
                   child: Column(
                     children: [
                       TextFormField(
-                        style: const TextStyle(
-                          color: Colors.black,
+                        style: TextStyle(
+                          color: primaryColor,
                         ),
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelStyle: TextStyle(
-                            color: Colors.black
+                            color: primaryColor
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Colors.black
+                              color: primaryColor
                             )
                           ),
                           labelText: "Username",
-                          icon: Icon(Icons.people, color: Colors.black,),
+                          icon: Icon(Icons.people, color: primaryColor,),
                         ),
                       ),
                       TextFormField(
                         obscureText: true,
-                        style: const TextStyle(
-                          color: Colors.black
+                        style: TextStyle(
+                          color: primaryColor
                         ),
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: primaryColor,
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Colors.black
+                              color: primaryColor
                             )
                           ),
                           labelText: "Password",
-                          icon: Icon(Icons.lock_outline_rounded, color: Colors.black,)
+                          icon: Icon(Icons.lock_outline_rounded, color: primaryColor,)
                         ),
                       ),
                       const SizedBox(
@@ -77,8 +78,8 @@ class LoginPage extends StatelessWidget {
                            "Sign In"
                          ),
                          style: TextButton.styleFrom(
-                           primary: Colors.white,
-                           backgroundColor: Colors.black,
+                           primary: netralColor,
+                           backgroundColor: primaryColor,
                            shape: RoundedRectangleBorder(
                              borderRadius: BorderRadius.circular(18.0),
                            ),
@@ -99,8 +100,8 @@ class LoginPage extends StatelessWidget {
                               Navigator.of(context).pushNamed(RegisterPage.nameRoute);
                             },
                             style: TextButton.styleFrom(
-                              onSurface: Colors.white,
-                              primary: Colors.amber
+                              onSurface: netralColor,
+                              primary: alternativeColor
                             ),
                             child: const Text(
                               "Sign Up",

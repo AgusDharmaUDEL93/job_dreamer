@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:job_dreamer/interface/home_page.dart';
 
+import '../constant/color.dart';
+
 class RegisterPage extends StatelessWidget {
   static const nameRoute = '/registerpage';
 
@@ -29,73 +31,73 @@ class RegisterPage extends StatelessWidget {
                   child: Column(
                     children: [
                       TextFormField(
-                        style: const TextStyle(
-                          color: Colors.black,
+                        style: TextStyle(
+                          color: primaryColor,
                         ),
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelStyle: TextStyle(
-                            color: Colors.black
+                            color: primaryColor
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Colors.black
+                              color: primaryColor
                             )
                           ),
                           labelText: "Email",
-                          icon: Icon(Icons.people, color: Colors.black,),
+                          icon: Icon(Icons.people, color: primaryColor,),
                         ),
                       ),
                       TextFormField(
-                        style: const TextStyle(
-                          color: Colors.black,
+                        style: TextStyle(
+                          color: primaryColor,
                         ),
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelStyle: TextStyle(
-                            color: Colors.black
+                            color: primaryColor
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Colors.black
+                              color: primaryColor
                             )
                           ),
                           labelText: "Username",
-                          icon: Icon(Icons.people, color: Colors.black,),
+                          icon: Icon(Icons.people, color: primaryColor,),
                         ),
                       ),
                       TextFormField(
                         obscureText: true,
-                        style: const TextStyle(
-                          color: Colors.black
+                        style: TextStyle(
+                          color: primaryColor
                         ),
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: primaryColor,
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Colors.black
+                              color: primaryColor
                             )
                           ),
                           labelText: "Password",
-                          icon: Icon(Icons.lock_outline_rounded, color: Colors.black,)
+                          icon: Icon(Icons.lock_outline_rounded, color: primaryColor,)
                         ),
                       ),
                       TextFormField(
                         obscureText: true,
-                        style: const TextStyle(
-                          color: Colors.black
+                        style: TextStyle(
+                          color: primaryColor
                         ),
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: primaryColor,
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Colors.black
+                              color: primaryColor
                             )
                           ),
                           labelText: "Confirm Password",
-                          icon: Icon(Icons.lock_outline_rounded, color: Colors.black,)
+                          icon: Icon(Icons.lock_outline_rounded, color: primaryColor,)
                         ),
                       ),
                       const SizedBox(
@@ -112,8 +114,8 @@ class RegisterPage extends StatelessWidget {
                            "SIGN UP"
                          ),
                          style: TextButton.styleFrom(
-                           primary: Colors.white,
-                           backgroundColor: Colors.black,
+                           primary: netralColor,
+                           backgroundColor: primaryColor,
                            shape: RoundedRectangleBorder(
                              borderRadius: BorderRadius.circular(18.0),
                            ),
@@ -134,8 +136,8 @@ class RegisterPage extends StatelessWidget {
                               Navigator.of(context).pop();
                             },
                             style: TextButton.styleFrom(
-                              onSurface: Colors.white,
-                              primary: Colors.amber
+                              onSurface: netralColor,
+                              primary: alternativeColor
                             ),
                             child: const Text(
                               "SIGN IN",

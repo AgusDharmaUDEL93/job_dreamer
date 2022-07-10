@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_dreamer/constant/color.dart';
 
 class HomePage extends StatelessWidget {
   static const nameRoute = '/homepage';
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
 
       ),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: primaryColor,
         elevation: 0,
       ),
       body: const Body(),
@@ -27,26 +28,25 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: [
-        SizedBox(
-          height: size.height *0.2,
+        Container(
+          height: size.height * 0.2,
           child: Stack(
             children: [
               Container(
-                height: size.height*0.2 -27,
-                decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Color(0xff010101),
-                        Color(0xff4b4b4b)
-                      ],
-                    ),
-                    color: Colors.black,
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(36),
-                      bottomRight: Radius.circular(36),
-                    )
+                height: size.height * 0.2 - 27,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      primaryColor,
+                      secondaryColor
+                    ]
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(36),
+                    bottomRight: Radius.circular(36)
+                  )
                 ),
               ),
               Positioned(
@@ -56,26 +56,28 @@ class Body extends StatelessWidget {
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 27),
                   padding: const EdgeInsets.symmetric(horizontal: 27),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      suffixIcon: const Icon(Icons.search),
+                      suffixIconColor: textHint,
+                      hintText: "S e a r c h",
+                      hintStyle: TextStyle(
+                        color: textHint
+                      ),
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none
+                    ),
+                  ),
                   height: 45,
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 50,
-                        )
-                      ]
-                  ),
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                        hintText: "S e a r c h",
-                        hintStyle: TextStyle(
-                          color: Color(0xff696969),
-                        ),
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none
-                    ),
+                    color: netralColor,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        offset: Offset(0, 10),
+                        blurRadius: 50
+                      )
+                    ]
                   ),
                 ),
               ),
@@ -86,4 +88,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
